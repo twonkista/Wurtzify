@@ -16,6 +16,14 @@ def submit():
     else:
         return render_template("index.html",output="<div style='text-align:center'>NOT FOUND</div>")
 
+@app.route("/date/",methods = ['POST'])
+def submit2():
+    if request.method == "POST":
+        user = request.form["date"]
+        return render_template("index.html",output2=FindItemByDate(user))
+    else:
+        return render_template("index.html",output2="<div style='text-align:center'>NOT FOUND</div>")
+
 
 if __name__ == "__main__":
     app.run()
