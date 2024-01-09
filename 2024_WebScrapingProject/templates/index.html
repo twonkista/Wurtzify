@@ -12,9 +12,18 @@
         <p><input type="text" name="nm" placeholder="Enter Song Name"/></p>
         <p><input type="submit" value="submit"/></p>
     </form>
+    <form action="/date/" method="post" style="text-align: center">
+        <p><input type="text" name="date" placeholder="Enter Date (e.g 6.12.13)"/></p>
+        <button type="submit">Enter Date</button>
+    </form>
     {% if output %}
         <div style="text-align: center">
             <td>{{output}}</td>
+        </div>
+    {% endif %}
+    {% if output2 %}
+        <div style="text-align: center">
+            <td>{{output2}}</td>
         </div>
     {% endif %}
 </body>
